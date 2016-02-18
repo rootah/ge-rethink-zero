@@ -25,5 +25,15 @@ namespace ge_rethink_zero
                      .Timeout(60)
                      .Connect();
         }
+
+        private void mainForm_Load(object sender, System.EventArgs e)
+        {
+            dashSwitch.IsOn = false;
+        }
+
+        private void dashSwitch_Toggled(object sender, System.EventArgs e)
+        {
+            rPage1.Visible = dashSwitch.IsOn;
+        }
     }
 }
