@@ -30,20 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer3 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
+            this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // documentGroup1
+            // 
+            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
+            this.document1});
+            // 
+            // document1
+            // 
+            this.document1.Caption = "dockPanel1";
+            this.document1.ControlName = "dockPanel1";
+            this.document1.FloatLocation = new System.Drawing.Point(0, 0);
+            this.document1.FloatSize = new System.Drawing.Size(200, 200);
+            this.document1.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
+            this.document1.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
+            this.document1.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
             // documentManager1
             // 
@@ -97,33 +112,18 @@
             this.dockPanel1_Container.Size = new System.Drawing.Size(635, 449);
             this.dockPanel1_Container.TabIndex = 0;
             // 
-            // document1
-            // 
-            this.document1.Caption = "dockPanel1";
-            this.document1.ControlName = "dockPanel1";
-            this.document1.FloatLocation = new System.Drawing.Point(0, 0);
-            this.document1.FloatSize = new System.Drawing.Size(200, 200);
-            this.document1.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
-            this.document1.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
-            this.document1.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // documentGroup1
-            // 
-            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
-            this.document1});
-            // 
             // docManUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "docManUC";
             this.Size = new System.Drawing.Size(641, 479);
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             this.ResumeLayout(false);
 
         }

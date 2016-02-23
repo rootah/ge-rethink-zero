@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="Common.Logging, Version=3.3.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <HintPath>..\packages\Common.Logging.3.3.0\lib\net40\Common.Logging.dll</HintPath>
       <Private>True</Private>
@@ -64,7 +65,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +88,24 @@
     <Compile Include="docManUC.Designer.cs">
       <DependentUpon>docManUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="groupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="groupForm.Designer.cs">
+      <DependentUpon>groupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="groupTreeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="groupTreeUC.Designer.cs">
+      <DependentUpon>groupTreeUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="groupUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="groupUC.Designer.cs">
+      <DependentUpon>groupUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +116,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="docManUC.resx">
       <DependentUpon>docManUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="groupForm.resx">
+      <DependentUpon>groupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="groupTreeUC.resx">
+      <DependentUpon>groupTreeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="groupUC.resx">
+      <DependentUpon>groupUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
