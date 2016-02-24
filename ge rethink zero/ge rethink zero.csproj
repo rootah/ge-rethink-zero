@@ -82,6 +82,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="detailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="detailsUC.Designer.cs">
+      <DependentUpon>detailsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="docManUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,12 +99,6 @@
     </Compile>
     <Compile Include="groupForm.Designer.cs">
       <DependentUpon>groupForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="groupTreeUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="groupTreeUC.Designer.cs">
-      <DependentUpon>groupTreeUC.cs</DependentUpon>
     </Compile>
     <Compile Include="groupUC.cs">
       <SubType>UserControl</SubType>
@@ -114,14 +114,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="detailsUC.resx">
+      <DependentUpon>detailsUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="docManUC.resx">
       <DependentUpon>docManUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="groupForm.resx">
       <DependentUpon>groupForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="groupTreeUC.resx">
-      <DependentUpon>groupTreeUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="groupUC.resx">
       <DependentUpon>groupUC.cs</DependentUpon>

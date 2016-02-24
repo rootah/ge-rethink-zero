@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using DevExpress.XtraBars.Docking;
 using DevExpress.XtraBars.Docking2010.Customization;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
-using DevExpress.XtraEditors;
-using DevExpress.XtraTreeList.Nodes;
 using RethinkDb.Driver;
 
 namespace ge_rethink_zero
@@ -34,12 +31,12 @@ namespace ge_rethink_zero
                      .Connect();
         }
 
-        private void mainForm_Load(object sender, System.EventArgs e)
+        private void mainForm_Load(object sender, EventArgs e)
         {
             dashSwitch.IsOn = false;
         }
 
-        private void dashSwitch_Toggled(object sender, System.EventArgs e)
+        private void dashSwitch_Toggled(object sender, EventArgs e)
         {
             rPage1.Visible = dashSwitch.IsOn;
         }
@@ -51,23 +48,23 @@ namespace ge_rethink_zero
 
         private void mainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FlyoutAction action = new FlyoutAction { Caption = "Confirm", Description = "Close the application?" };
+            var action = new FlyoutAction { Caption = "Confirm", Description = "Close the application?" };
             Predicate<DialogResult> predicate = canCloseFunc;
-            FlyoutCommand command1 = new FlyoutCommand { Text = "Close", Result = DialogResult.Yes };
-            FlyoutCommand command2 = new FlyoutCommand { Text = "Cancel", Result = DialogResult.No };
+            var command1 = new FlyoutCommand { Text = "Close", Result = DialogResult.Yes };
+            var command2 = new FlyoutCommand { Text = "Cancel", Result = DialogResult.No };
             action.Commands.Add(command1);
             action.Commands.Add(command2);
-            FlyoutProperties properties = new FlyoutProperties();
-            //properties.ButtonSize = new Size(100, 40);
-            properties.Style = FlyoutStyle.MessageBox;
-            properties.Alignment = ContentAlignment.MiddleCenter;
+            var properties = new FlyoutProperties
+            {
+                Style = FlyoutStyle.MessageBox,
+                Alignment = ContentAlignment.MiddleCenter
+            };
             e.Cancel = FlyoutDialog.Show(this, action, properties, predicate) != DialogResult.Yes;
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            groupForm gForm = new groupForm();
-            gForm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            groupForm gForm = new groupForm {FormBorderStyle = FormBorderStyle.FixedToolWindow};
             gForm.ShowDialog(owner: this);
             //DockPanel groupadd = dockManager1.AddPanel(DockingStyle.Float);
             //groupadd.Text = @"Adding group";

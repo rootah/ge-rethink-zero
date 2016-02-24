@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace ge_rethink_zero
 {
-    public partial class groupTreeUC : DevExpress.XtraEditors.XtraUserControl
+    public partial class detailsUC : DevExpress.XtraEditors.XtraUserControl
     {
-        public groupTreeUC()
+        public detailsUC()
         {
             InitializeComponent();
         }
