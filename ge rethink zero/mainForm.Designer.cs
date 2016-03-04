@@ -53,9 +53,10 @@
             this.backstageExitBtn = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.connectBtn = new DevExpress.XtraBars.BarButtonItem();
             this.createBtn = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.qgroupAddBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
+            this.groupUC1 = new ge_rethink_zero.groupUC();
             this.rPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -93,6 +94,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).BeginInit();
+            this.popupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel2.SuspendLayout();
@@ -120,28 +123,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1457, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1452, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 573);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1457, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 445);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1452, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 573);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 445);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1457, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 573);
+            this.barDockControlRight.Location = new System.Drawing.Point(1452, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 445);
             // 
             // defaultLookAndFeel1
             // 
@@ -156,11 +159,10 @@
             this.ribbonCtrl.ExpandCollapseItem,
             this.connectBtn,
             this.createBtn,
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.qgroupAddBtn});
             this.ribbonCtrl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonCtrl.MaxItemId = 7;
+            this.ribbonCtrl.MaxItemId = 8;
             this.ribbonCtrl.Name = "ribbonCtrl";
             this.ribbonCtrl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rPage1,
@@ -171,7 +173,7 @@
             this.ribbonCtrl.ShowItemCaptionsInPageHeader = true;
             this.ribbonCtrl.ShowItemCaptionsInQAT = true;
             this.ribbonCtrl.ShowToolbarCustomizeItem = false;
-            this.ribbonCtrl.Size = new System.Drawing.Size(1457, 83);
+            this.ribbonCtrl.Size = new System.Drawing.Size(1452, 83);
             this.ribbonCtrl.StatusBar = this.ribbonStatBar;
             this.ribbonCtrl.Toolbar.ShowCustomizeItem = false;
             // 
@@ -327,32 +329,50 @@
             this.createBtn.Id = 3;
             this.createBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("createBtn.LargeGlyph")));
             this.createBtn.Name = "createBtn";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "root";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 4;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "node";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
-            this.barButtonItem2.Id = 5;
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.createBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.createBtn_ItemClick);
             // 
             // barButtonItem3
             // 
             this.barButtonItem3.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.barButtonItem3.Caption = "group add";
+            this.barButtonItem3.DropDownEnabled = false;
             this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 6;
             this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // qgroupAddBtn
+            // 
+            this.qgroupAddBtn.ActAsDropDown = true;
+            this.qgroupAddBtn.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
+            this.qgroupAddBtn.Caption = "new group";
+            this.qgroupAddBtn.DropDownControl = this.popupControlContainer1;
+            this.qgroupAddBtn.Glyph = ((System.Drawing.Image)(resources.GetObject("qgroupAddBtn.Glyph")));
+            this.qgroupAddBtn.Id = 7;
+            this.qgroupAddBtn.Name = "qgroupAddBtn";
+            // 
+            // popupControlContainer1
+            // 
+            this.popupControlContainer1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.popupControlContainer1.CloseOnLostFocus = false;
+            this.popupControlContainer1.CloseOnOuterMouseClick = false;
+            this.popupControlContainer1.Controls.Add(this.groupUC1);
+            this.popupControlContainer1.Location = new System.Drawing.Point(549, 147);
+            this.popupControlContainer1.Name = "popupControlContainer1";
+            this.popupControlContainer1.Ribbon = this.ribbonCtrl;
+            this.popupControlContainer1.Size = new System.Drawing.Size(261, 176);
+            this.popupControlContainer1.TabIndex = 46;
+            this.popupControlContainer1.Visible = false;
+            // 
+            // groupUC1
+            // 
+            this.groupUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupUC1.Location = new System.Drawing.Point(0, 0);
+            this.groupUC1.Name = "groupUC1";
+            this.groupUC1.Size = new System.Drawing.Size(261, 176);
+            this.groupUC1.TabIndex = 0;
             // 
             // rPage1
             // 
@@ -378,18 +398,17 @@
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.qgroupAddBtn);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // ribbonStatBar
             // 
-            this.ribbonStatBar.Location = new System.Drawing.Point(0, 552);
+            this.ribbonStatBar.Location = new System.Drawing.Point(0, 424);
             this.ribbonStatBar.Name = "ribbonStatBar";
             this.ribbonStatBar.Ribbon = this.ribbonCtrl;
-            this.ribbonStatBar.Size = new System.Drawing.Size(1457, 21);
+            this.ribbonStatBar.Size = new System.Drawing.Size(1452, 21);
             // 
             // styleController1
             // 
@@ -472,7 +491,7 @@
             this.dockPanel2.Options.ShowCloseButton = false;
             this.dockPanel2.Options.ShowMaximizeButton = false;
             this.dockPanel2.OriginalSize = new System.Drawing.Size(219, 200);
-            this.dockPanel2.Size = new System.Drawing.Size(219, 469);
+            this.dockPanel2.Size = new System.Drawing.Size(219, 341);
             this.dockPanel2.Text = "Groups";
             // 
             // dockPanel2_Container
@@ -480,7 +499,7 @@
             this.dockPanel2_Container.Controls.Add(this.gridControl1);
             this.dockPanel2_Container.Location = new System.Drawing.Point(4, 38);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(211, 427);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(211, 299);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // gridControl1
@@ -490,7 +509,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.tabFormDefaultManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(211, 427);
+            this.gridControl1.Size = new System.Drawing.Size(211, 299);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -516,7 +535,7 @@
             this.dockPanel3.Options.ShowCloseButton = false;
             this.dockPanel3.Options.ShowMaximizeButton = false;
             this.dockPanel3.OriginalSize = new System.Drawing.Size(256, 200);
-            this.dockPanel3.Size = new System.Drawing.Size(256, 469);
+            this.dockPanel3.Size = new System.Drawing.Size(256, 341);
             this.dockPanel3.Text = "Students";
             // 
             // dockPanel3_Container
@@ -524,7 +543,7 @@
             this.dockPanel3_Container.Controls.Add(this.gridControl2);
             this.dockPanel3_Container.Location = new System.Drawing.Point(4, 38);
             this.dockPanel3_Container.Name = "dockPanel3_Container";
-            this.dockPanel3_Container.Size = new System.Drawing.Size(248, 427);
+            this.dockPanel3_Container.Size = new System.Drawing.Size(248, 299);
             this.dockPanel3_Container.TabIndex = 0;
             // 
             // gridControl2
@@ -534,7 +553,7 @@
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.MenuManager = this.tabFormDefaultManager1;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(248, 427);
+            this.gridControl2.Size = new System.Drawing.Size(248, 299);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -572,14 +591,15 @@
             this.docManUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.docManUC1.Location = new System.Drawing.Point(475, 83);
             this.docManUC1.Name = "docManUC1";
-            this.docManUC1.Size = new System.Drawing.Size(982, 469);
+            this.docManUC1.Size = new System.Drawing.Size(977, 341);
             this.docManUC1.TabIndex = 26;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1457, 573);
+            this.ClientSize = new System.Drawing.Size(1452, 445);
+            this.Controls.Add(this.popupControlContainer1);
             this.Controls.Add(this.docManUC1);
             this.Controls.Add(this.backstageViewControl1);
             this.Controls.Add(this.dockPanel3);
@@ -610,6 +630,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer1)).EndInit();
+            this.popupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel2.ResumeLayout(false);
@@ -663,8 +685,6 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem4;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem5;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private docManUC docManUC1;
@@ -679,6 +699,9 @@
         private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.Docking.DockManager dockManager1;
+        private DevExpress.XtraBars.BarButtonItem qgroupAddBtn;
+        private DevExpress.XtraBars.PopupControlContainer popupControlContainer1;
+        private groupUC groupUC1;
     }
 }
 

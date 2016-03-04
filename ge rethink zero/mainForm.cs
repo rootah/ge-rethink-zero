@@ -65,5 +65,10 @@ namespace ge_rethink_zero
 
             //groupadd.FloatForm.StartPosition = FormStartPosition.CenterParent;
         }
+
+        private void createBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }
