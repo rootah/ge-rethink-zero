@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.timeEdit1 = new DevExpress.XtraEditors.TimeEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.timeEdit = new DevExpress.XtraEditors.TimeEdit();
+            this.numEdit = new DevExpress.XtraEditors.TextEdit();
+            this.lvlEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.daysEdit = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.okButton = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -51,10 +51,10 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lvlEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daysEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -73,11 +73,11 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.timeEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
+            this.layoutControl1.Controls.Add(this.timeEdit);
+            this.layoutControl1.Controls.Add(this.numEdit);
+            this.layoutControl1.Controls.Add(this.lvlEdit);
+            this.layoutControl1.Controls.Add(this.daysEdit);
+            this.layoutControl1.Controls.Add(this.okButton);
             this.layoutControl1.Controls.Add(this.simpleButton2);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -88,82 +88,83 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // timeEdit1
+            // timeEdit
             // 
-            this.timeEdit1.EditValue = new System.DateTime(2016, 2, 23, 0, 0, 0, 0);
-            this.timeEdit1.Location = new System.Drawing.Point(62, 84);
-            this.timeEdit1.Name = "timeEdit1";
-            this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.timeEdit.EditValue = new System.DateTime(2016, 2, 23, 0, 0, 0, 0);
+            this.timeEdit.Location = new System.Drawing.Point(62, 84);
+            this.timeEdit.Name = "timeEdit";
+            this.timeEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.timeEdit1.Properties.Mask.EditMask = "t";
-            this.timeEdit1.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit1.Size = new System.Drawing.Size(126, 20);
-            this.timeEdit1.StyleController = this.layoutControl1;
-            this.timeEdit1.TabIndex = 7;
+            this.timeEdit.Properties.Mask.EditMask = "t";
+            this.timeEdit.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit.Size = new System.Drawing.Size(126, 20);
+            this.timeEdit.StyleController = this.layoutControl1;
+            this.timeEdit.TabIndex = 7;
             // 
-            // textEdit1
+            // numEdit
             // 
-            this.textEdit1.Location = new System.Drawing.Point(62, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.NullValuePrompt = "format: yynn";
-            this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit1.Size = new System.Drawing.Size(126, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 4;
+            this.numEdit.Location = new System.Drawing.Point(62, 12);
+            this.numEdit.Name = "numEdit";
+            this.numEdit.Properties.NullValuePrompt = "format: yynn";
+            this.numEdit.Properties.NullValuePromptShowForEmptyValue = true;
+            this.numEdit.Size = new System.Drawing.Size(126, 20);
+            this.numEdit.StyleController = this.layoutControl1;
+            this.numEdit.TabIndex = 4;
             // 
-            // textEdit2
+            // lvlEdit
             // 
-            this.textEdit2.Location = new System.Drawing.Point(62, 36);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lvlEdit.Location = new System.Drawing.Point(62, 36);
+            this.lvlEdit.Name = "lvlEdit";
+            this.lvlEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit2.Properties.Items.AddRange(new object[] {
+            this.lvlEdit.Properties.Items.AddRange(new object[] {
             "beginner",
             "elementary",
             "pre-intermediate",
             "intermediate",
             "upper-intermediate",
             "advanced"});
-            this.textEdit2.Size = new System.Drawing.Size(126, 20);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 5;
+            this.lvlEdit.Size = new System.Drawing.Size(126, 20);
+            this.lvlEdit.StyleController = this.layoutControl1;
+            this.lvlEdit.TabIndex = 5;
             // 
-            // dateEdit1
+            // daysEdit
             // 
-            this.dateEdit1.EditValue = "";
-            this.dateEdit1.Location = new System.Drawing.Point(62, 60);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.AllowMultiSelect = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.daysEdit.EditValue = "";
+            this.daysEdit.Location = new System.Drawing.Point(62, 60);
+            this.daysEdit.Name = "daysEdit";
+            this.daysEdit.Properties.AllowMultiSelect = true;
+            this.daysEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.DisplayFormat.FormatString = "d";
-            this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.EditFormat.FormatString = "d";
-            this.dateEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            this.daysEdit.Properties.DisplayFormat.FormatString = "d";
+            this.daysEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.daysEdit.Properties.EditFormat.FormatString = "d";
+            this.daysEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.daysEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("mon"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("tue"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("wed"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("thi"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("fri"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("sat")});
-            this.dateEdit1.Properties.Mask.EditMask = "d";
-            this.dateEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.dateEdit1.Properties.SelectAllItemVisible = false;
-            this.dateEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.dateEdit1.Size = new System.Drawing.Size(126, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 6;
+            this.daysEdit.Properties.Mask.EditMask = "d";
+            this.daysEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+            this.daysEdit.Properties.SelectAllItemVisible = false;
+            this.daysEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.daysEdit.Size = new System.Drawing.Size(126, 20);
+            this.daysEdit.StyleController = this.layoutControl1;
+            this.daysEdit.TabIndex = 6;
             // 
-            // simpleButton1
+            // okButton
             // 
-            this.simpleButton1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.simpleButton1.Location = new System.Drawing.Point(42, 129);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(66, 23);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "OK";
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.okButton.Location = new System.Drawing.Point(42, 129);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(66, 23);
+            this.okButton.StyleController = this.layoutControl1;
+            this.okButton.TabIndex = 5;
+            this.okButton.Text = "OK";
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // simpleButton2
             // 
@@ -208,7 +209,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.textEdit1;
+            this.layoutControlItem1.Control = this.numEdit;
             this.layoutControlItem1.Location = new System.Drawing.Point(50, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(130, 24);
@@ -217,7 +218,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.textEdit2;
+            this.layoutControlItem2.Control = this.lvlEdit;
             this.layoutControlItem2.Location = new System.Drawing.Point(50, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(130, 24);
@@ -263,7 +264,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.dateEdit1;
+            this.layoutControlItem3.Control = this.daysEdit;
             this.layoutControlItem3.Location = new System.Drawing.Point(50, 48);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(130, 24);
@@ -284,7 +285,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.timeEdit1;
+            this.layoutControlItem4.Control = this.timeEdit;
             this.layoutControlItem4.Location = new System.Drawing.Point(50, 72);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(130, 24);
@@ -293,7 +294,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.simpleButton1;
+            this.layoutControlItem5.Control = this.okButton;
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem1";
             this.layoutControlItem5.Location = new System.Drawing.Point(30, 117);
             this.layoutControlItem5.MaxSize = new System.Drawing.Size(70, 27);
@@ -353,10 +354,10 @@
             this.Size = new System.Drawing.Size(200, 164);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lvlEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.daysEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -377,18 +378,18 @@
 
         #endregion
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit numEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit lvlEdit;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem2;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit dateEdit1;
-        private DevExpress.XtraEditors.TimeEdit timeEdit1;
+        private DevExpress.XtraEditors.CheckedComboBoxEdit daysEdit;
+        private DevExpress.XtraEditors.TimeEdit timeEdit;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton okButton;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
