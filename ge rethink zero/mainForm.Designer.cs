@@ -319,7 +319,6 @@
             this.connectBtn.Id = 1;
             this.connectBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("connectBtn.LargeGlyph")));
             this.connectBtn.Name = "connectBtn";
-            this.connectBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.connectBtn_ItemClick);
             // 
             // createBtn
             // 
