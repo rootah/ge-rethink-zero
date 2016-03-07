@@ -21,9 +21,10 @@ namespace ge_rethink_zero
         public groupUC()
         {
             InitializeComponent();
-            mongoInit();}
+            mongoInit();
+        }
 
-        private void mongoInit()
+        private static void mongoInit()
         {
             _client = new MongoClient();
             _database = _client.GetDatabase("rth_dev");
@@ -52,21 +53,26 @@ namespace ge_rethink_zero
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             listBoxControl1.Items.Clear();
-            for (int i = 0; i < daysEdit.Properties.Items.Count; i++)
+            for (var i = 0; i < daysEdit.Properties.Items.Count; i++)
             {
                 var item = daysEdit.Properties.Items[i];
                 if (item.CheckState != CheckState.Checked) continue;
                 
                 listBoxControl1.Items.Add(i.ToString());
             }
+            parentClose();
         }
 
-        //private class MyObject
-        //{
-        //    public MyObject() { }
+        private void parentClose()
+        {
+            var parent = Parent.FindForm();
+            
+            parent?.Close();
+        }
 
-        //    public int ID { get; set; }
-        //    public string Val { get; set; }
-        //}
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            parentClose();
+        }
     }
 }
