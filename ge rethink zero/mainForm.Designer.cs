@@ -54,8 +54,8 @@
             this.newGroupBtn = new DevExpress.XtraBars.BarButtonItem();
             this.newStdBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.editBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.delBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.rPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -73,11 +73,12 @@
             this.groupPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupGrid = new DevExpress.XtraGrid.GridControl();
-            this.realTimeSource = new DevExpress.Data.RealTimeSource();
+            this.realTimeGroupSource = new DevExpress.Data.RealTimeSource();
             this.groupView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.stdPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.stdGrid = new DevExpress.XtraGrid.GridControl();
+            this.realTimeStdSource = new DevExpress.Data.RealTimeSource();
             this.stdView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dataSet = new System.Data.DataSet();
             this.dataTable1 = new System.Data.DataTable();
@@ -160,8 +161,8 @@
             this.newGroupBtn,
             this.newStdBtn,
             this.barStaticItem1,
-            this.barButtonItem2,
-            this.barButtonItem3,
+            this.editBtn,
+            this.delBtn,
             this.barStaticItem2});
             this.ribbonCtrl.Location = new System.Drawing.Point(0, 0);
             this.ribbonCtrl.MaxItemId = 21;
@@ -338,17 +339,18 @@
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // barButtonItem2
+            // editBtn
             // 
-            this.barButtonItem2.Caption = "edit";
-            this.barButtonItem2.Id = 18;
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.editBtn.Caption = "edit";
+            this.editBtn.Id = 18;
+            this.editBtn.Name = "editBtn";
             // 
-            // barButtonItem3
+            // delBtn
             // 
-            this.barButtonItem3.Caption = "delete";
-            this.barButtonItem3.Id = 19;
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.delBtn.Caption = "delete";
+            this.delBtn.Id = 19;
+            this.delBtn.Name = "delBtn";
+            this.delBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.delBtn_ItemClick);
             // 
             // barStaticItem2
             // 
@@ -377,8 +379,8 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.newGroupBtn);
             this.ribbonPageGroup2.ItemLinks.Add(this.newStdBtn);
             this.ribbonPageGroup2.ItemLinks.Add(this.barStaticItem2, true);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.editBtn);
+            this.ribbonPageGroup2.ItemLinks.Add(this.delBtn);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
@@ -464,6 +466,7 @@
             // 
             this.groupPanel.Controls.Add(this.dockPanel2_Container);
             this.groupPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.groupPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupPanel.ID = new System.Guid("ae0d3af9-f675-4141-abf4-922ec195ef52");
             this.groupPanel.Location = new System.Drawing.Point(0, 80);
             this.groupPanel.Name = "groupPanel";
@@ -484,7 +487,7 @@
             // 
             // groupGrid
             // 
-            this.groupGrid.DataSource = this.realTimeSource;
+            this.groupGrid.DataSource = this.realTimeGroupSource;
             this.groupGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupGrid.Location = new System.Drawing.Point(0, 0);
             this.groupGrid.MainView = this.groupView;
@@ -495,10 +498,10 @@
             this.groupGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.groupView});
             // 
-            // realTimeSource
+            // realTimeGroupSource
             // 
-            this.realTimeSource.DisplayableProperties = null;
-            this.realTimeSource.UseWeakEventHandler = true;
+            this.realTimeGroupSource.DisplayableProperties = null;
+            this.realTimeGroupSource.UseWeakEventHandler = true;
             // 
             // groupView
             // 
@@ -543,6 +546,7 @@
             // 
             // stdGrid
             // 
+            this.stdGrid.DataSource = this.realTimeStdSource;
             this.stdGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stdGrid.Location = new System.Drawing.Point(0, 0);
             this.stdGrid.MainView = this.stdView;
@@ -553,15 +557,24 @@
             this.stdGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.stdView});
             // 
+            // realTimeStdSource
+            // 
+            this.realTimeStdSource.DisplayableProperties = null;
+            this.realTimeStdSource.UseWeakEventHandler = true;
+            // 
             // stdView
             // 
             this.stdView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.stdView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
             this.stdView.GridControl = this.stdGrid;
             this.stdView.Name = "stdView";
+            this.stdView.OptionsBehavior.Editable = false;
+            this.stdView.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.stdView.OptionsView.ShowColumnHeaders = false;
             this.stdView.OptionsView.ShowGroupPanel = false;
+            this.stdView.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
             this.stdView.OptionsView.ShowIndicator = false;
+            this.stdView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
             // 
             // dataSet
             // 
@@ -681,12 +694,13 @@
         private System.Data.DataSet dataSet;
         private System.Data.DataTable dataTable1;
         private System.Data.DataColumn dataColumn1;
-        private DevExpress.Data.RealTimeSource realTimeSource;
+        private DevExpress.Data.RealTimeSource realTimeGroupSource;
         private DevExpress.XtraBars.BarButtonItem newStdBtn;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem editBtn;
+        private DevExpress.XtraBars.BarButtonItem delBtn;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.Data.RealTimeSource realTimeStdSource;
     }
 }
 
