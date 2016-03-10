@@ -153,7 +153,7 @@ namespace ge_rethink_zero
         }
 
 
-        private void groupView_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        public void groupView_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
             if (groupView.GetFocusedRow() == null) return;
             var selectedgroupno = groupView.GetRowCellValue(groupView.FocusedRowHandle, "num").ToString();
@@ -172,6 +172,7 @@ namespace ge_rethink_zero
         private void newStdBtn_ItemClick(object sender, ItemClickEventArgs e)
         {
             var stdcontrol = new stdUC(this);
+            
             var panel = dockManager1.AddPanel(DockingStyle.Float);
             panel.Controls.Add(stdcontrol);
             panel.Options.ShowAutoHideButton = false;
@@ -180,9 +181,6 @@ namespace ge_rethink_zero
             panel.Text = @"student add in progress ..";
             panel.Options.ResizeDirection = ResizeDirection.None;
             panel.FloatLocation = new Point(Location.X + Width / 2 - 130, Location.Y + Height / 2 - 115);
-            
-            stdcontrol.mongoInit();
-            stdcontrol.groupComboFill();
         }
 
         private void stdDel()

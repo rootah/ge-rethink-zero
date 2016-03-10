@@ -687,7 +687,6 @@
         private DevExpress.XtraBars.Docking.DockPanel groupPanel;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel2_Container;
         private DevExpress.XtraGrid.GridControl groupGrid;
-        private DevExpress.XtraGrid.Views.Grid.GridView groupView;
         private groupUC groupUC1;
         private DevExpress.XtraBars.BarButtonItem newGroupBtn;
         public DevExpress.XtraBars.Docking.DockManager dockManager1;
@@ -701,6 +700,7 @@
         private DevExpress.XtraBars.BarButtonItem delBtn;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.Data.RealTimeSource realTimeStdSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView groupView;
     }
 }
 

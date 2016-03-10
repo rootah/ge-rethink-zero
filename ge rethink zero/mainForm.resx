@@ -153,9 +153,6 @@
         I0NSJTF8v5EhqZIYvt/IsEwyLJMMyyTDMsmwTDIsT1r5AQsDxP47zvsRAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="realTimeStdSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>850, 17</value>
-  </metadata>
   <metadata name="realTimeGroupSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>680, 17</value>
   </metadata>
@@ -167,6 +164,9 @@
   </metadata>
   <metadata name="dockManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>547, 17</value>
+  </metadata>
+  <metadata name="realTimeStdSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>850, 17</value>
   </metadata>
   <metadata name="dataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
