@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
@@ -44,7 +45,22 @@ namespace ge_rethink_zero
             dashSwitch.IsOn = false;
         }
 
-        public void stdGridFill(string groupno)
+        private void stdView_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            if (stdView.GetFocusedRow() == null) return;
+
+            var selectedstd = stdView.GetRowCellValue(stdView.FocusedRowHandle, "name").ToString();
+            var filter = Builders<BsonDocument>.Filter.Eq("fullname", selectedstd);
+            var projection = Builders<BsonDocument>.Projection.Exclude("_id").Include("fullname");
+            var collection = _database.GetCollection<BsonDocument>("students");
+            var eq = collection.Find(filter).Project(projection).ToCursor();
+            foreach (var document in eq.ToEnumerable())
+            {
+                detailsPanel.Text = document.Values.Single().ToString();
+            }
+        }
+
+        private void stdGridFill(string groupno)
         {
             var stable = new DataTable();
             stable.Clear();
@@ -165,6 +181,7 @@ namespace ge_rethink_zero
             else
             {
                 stdPanel.Text = @"Students " + selectedgroupno;
+                
                 stdGridFill(selectedgroupno);
             }
         }
