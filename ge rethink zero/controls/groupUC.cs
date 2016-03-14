@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
+using ge_rethink_zero.forms;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace ge_rethink_zero
+namespace ge_rethink_zero.controls
 {
     public partial class groupUC : DevExpress.XtraEditors.XtraUserControl
     {

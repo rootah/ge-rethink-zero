@@ -1,4 +1,4 @@
-﻿namespace ge_rethink_zero
+﻿namespace ge_rethink_zero.controls
 {
     partial class groupUC
     {

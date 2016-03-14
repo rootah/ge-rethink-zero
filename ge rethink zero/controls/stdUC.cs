@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using ge_rethink_zero.forms;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace ge_rethink_zero
+namespace ge_rethink_zero.controls
 {
     public partial class stdUC : DevExpress.XtraEditors.XtraUserControl
     {

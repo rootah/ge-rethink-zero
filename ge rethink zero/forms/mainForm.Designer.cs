@@ -1,4 +1,4 @@
-﻿namespace ge_rethink_zero
+﻿namespace ge_rethink_zero.forms
 {
     partial class mainForm
     {
@@ -28,24 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer9 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
+            this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.tabFormDefaultManager1 = new DevExpress.XtraBars.TabFormDefaultManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.ribbonCtrl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.dashSwitch = new DevExpress.XtraEditors.ToggleSwitch();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.backstageViewClientControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
@@ -61,7 +59,7 @@
             this.rPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.styleController1 = new DevExpress.XtraEditors.StyleController();
+            this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.backstageViewClientControl4 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewClientControl5 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
             this.backstageViewClientControl6 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
@@ -69,7 +67,7 @@
             this.backstageViewTabItem4 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem5 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewTabItem6 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.groupPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel2_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.groupGrid = new DevExpress.XtraGrid.GridControl();
@@ -80,28 +78,28 @@
             this.stdGrid = new DevExpress.XtraGrid.GridControl();
             this.realTimeStdSource = new DevExpress.Data.RealTimeSource();
             this.stdView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.detailsPanel = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dataSet = new System.Data.DataSet();
             this.dataTable1 = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
-            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
-            this.detailsPanel = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document();
-            this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.realTimeDetailSource = new DevExpress.Data.RealTimeSource();
+            this.detailsLayoutControl = new DevExpress.XtraLayout.LayoutControl();
+            this.detailsLayoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.splitterItem1 = new DevExpress.XtraLayout.SplitterItem();
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonCtrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
             this.backstageViewClientControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dashSwitch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.groupPanel.SuspendLayout();
@@ -112,14 +110,34 @@
             this.dockPanel3_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stdGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stdView)).BeginInit();
+            this.detailsPanel.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            this.detailsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailsLayoutControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailsLayoutControlGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // documentGroup1
+            // 
+            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
+            this.document2});
+            // 
+            // document2
+            // 
+            this.document2.Caption = "details";
+            this.document2.ControlName = "detailsPanel";
+            this.document2.FloatLocation = new System.Drawing.Point(0, 0);
+            this.document2.FloatSize = new System.Drawing.Size(200, 200);
+            this.document2.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
+            this.document2.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
+            this.document2.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
             // 
             // tabFormDefaultManager1
             // 
@@ -177,7 +195,7 @@
             this.delBtn,
             this.barStaticItem2});
             this.ribbonCtrl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonCtrl.MaxItemId = 21;
+            this.ribbonCtrl.MaxItemId = 24;
             this.ribbonCtrl.Name = "ribbonCtrl";
             this.ribbonCtrl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rPage1,
@@ -205,94 +223,38 @@
             this.backstageViewControl1.Items.Add(this.backstageViewTabItem2);
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator1);
             this.backstageViewControl1.Items.Add(this.backstageExitBtn);
-            this.backstageViewControl1.Location = new System.Drawing.Point(1084, 12);
+            this.backstageViewControl1.Location = new System.Drawing.Point(1020, 12);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.PaintStyle = DevExpress.XtraBars.Ribbon.BackstageViewPaintStyle.Skinned;
             this.backstageViewControl1.Ribbon = this.ribbonCtrl;
-            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem1;
-            this.backstageViewControl1.SelectedTabIndex = 0;
-            this.backstageViewControl1.Size = new System.Drawing.Size(277, 51);
+            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem2;
+            this.backstageViewControl1.SelectedTabIndex = 1;
+            this.backstageViewControl1.Size = new System.Drawing.Size(341, 54);
             this.backstageViewControl1.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.backstageViewControl1.TabIndex = 6;
             // 
             // backstageViewClientControl1
             // 
             this.backstageViewClientControl1.Controls.Add(this.panelControl1);
-            this.backstageViewClientControl1.Controls.Add(this.layoutControl1);
             this.backstageViewClientControl1.Location = new System.Drawing.Point(157, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(102, 0);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(1043, 191);
             this.backstageViewClientControl1.TabIndex = 1;
             // 
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(225, 0);
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(0, 0);
+            this.panelControl1.Size = new System.Drawing.Size(1043, 191);
             this.panelControl1.TabIndex = 1;
-            // 
-            // layoutControl1
-            // 
-            this.layoutControl1.Controls.Add(this.dashSwitch);
-            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(467, 137, 725, 524);
-            this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(225, 0);
-            this.layoutControl1.TabIndex = 0;
-            this.layoutControl1.Text = "layoutControl1";
-            // 
-            // dashSwitch
-            // 
-            this.dashSwitch.Location = new System.Drawing.Point(12, 12);
-            this.dashSwitch.MenuManager = this.tabFormDefaultManager1;
-            this.dashSwitch.Name = "dashSwitch";
-            this.dashSwitch.Properties.AllowFocused = false;
-            this.dashSwitch.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.dashSwitch.Properties.OffText = "Show dash / off";
-            this.dashSwitch.Properties.OnText = "Show dash / on";
-            this.dashSwitch.Size = new System.Drawing.Size(184, 24);
-            this.dashSwitch.StyleController = this.layoutControl1;
-            this.dashSwitch.TabIndex = 4;
-            this.dashSwitch.Toggled += new System.EventHandler(this.dashSwitch_Toggled);
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.emptySpaceItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(208, 58);
-            this.layoutControlGroup1.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.dashSwitch;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(188, 28);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 28);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(188, 10);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // backstageViewClientControl2
             // 
             this.backstageViewClientControl2.Location = new System.Drawing.Point(157, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(102, -13);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(166, 0);
             this.backstageViewClientControl2.TabIndex = 2;
             // 
             // backstageViewTabItem1
@@ -305,7 +267,7 @@
             this.backstageViewTabItem1.GlyphHorizontalAlignment = DevExpress.Utils.Drawing.ItemHorizontalAlignment.Left;
             this.backstageViewTabItem1.GlyphLocation = DevExpress.Utils.Drawing.ItemLocation.Left;
             this.backstageViewTabItem1.Name = "backstageViewTabItem1";
-            this.backstageViewTabItem1.Selected = true;
+            this.backstageViewTabItem1.Selected = false;
             // 
             // backstageViewTabItem2
             // 
@@ -316,7 +278,7 @@
             this.backstageViewTabItem2.GlyphHorizontalAlignment = DevExpress.Utils.Drawing.ItemHorizontalAlignment.Left;
             this.backstageViewTabItem2.GlyphLocation = DevExpress.Utils.Drawing.ItemLocation.Left;
             this.backstageViewTabItem2.Name = "backstageViewTabItem2";
-            this.backstageViewTabItem2.Selected = false;
+            this.backstageViewTabItem2.Selected = true;
             // 
             // backstageViewItemSeparator1
             // 
@@ -458,6 +420,7 @@
             // 
             // dockManager1
             // 
+            this.dockManager1.AllowGlyphSkinning = true;
             this.dockManager1.Form = this;
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.groupPanel,
@@ -590,6 +553,23 @@
             this.stdView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
             this.stdView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.stdView_FocusedRowChanged);
             // 
+            // detailsPanel
+            // 
+            this.detailsPanel.Controls.Add(this.dockPanel1_Container);
+            this.detailsPanel.DockedAsTabbedDocument = true;
+            this.detailsPanel.ID = new System.Guid("fdf7364a-93e7-4703-8f3b-2a6f48760aab");
+            this.detailsPanel.Name = "detailsPanel";
+            this.detailsPanel.OriginalSize = new System.Drawing.Size(200, 200);
+            this.detailsPanel.Text = "details";
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.detailsLayoutControl);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
+            this.dockPanel1_Container.Size = new System.Drawing.Size(971, 314);
+            this.dockPanel1_Container.TabIndex = 0;
+            // 
             // dataSet
             // 
             this.dataSet.DataSetName = "NewDataSet";
@@ -620,46 +600,71 @@
             this.tabbedView1.DocumentGroups.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup[] {
             this.documentGroup1});
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
-            this.document1});
-            dockingContainer2.Element = this.documentGroup1;
+            this.document2});
+            dockingContainer9.Element = this.documentGroup1;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer2});
-            // 
-            // detailsPanel
-            // 
-            this.detailsPanel.Controls.Add(this.dockPanel1_Container);
-            this.detailsPanel.DockedAsTabbedDocument = true;
-            this.detailsPanel.ID = new System.Guid("a9444aa5-69c1-453a-bfbc-d5378e398687");
-            this.detailsPanel.Name = "detailsPanel";
-            this.detailsPanel.OriginalSize = new System.Drawing.Size(200, 200);
-            this.detailsPanel.Text = "Jane Doe / 1610";
-            // 
-            // dockPanel1_Container
-            // 
-            this.dockPanel1_Container.Location = new System.Drawing.Point(0, 0);
-            this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(971, 314);
-            this.dockPanel1_Container.TabIndex = 0;
-            // 
-            // document1
-            // 
-            this.document1.Caption = "Jane Doe / 1610";
-            this.document1.ControlName = "dockPanel1";
-            this.document1.FloatLocation = new System.Drawing.Point(0, 0);
-            this.document1.FloatSize = new System.Drawing.Size(200, 200);
-            this.document1.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
-            this.document1.Properties.AllowFloat = DevExpress.Utils.DefaultBoolean.True;
-            this.document1.Properties.AllowFloatOnDoubleClick = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // documentGroup1
-            // 
-            this.documentGroup1.Items.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document[] {
-            this.document1});
+            dockingContainer9});
             // 
             // realTimeDetailSource
             // 
             this.realTimeDetailSource.DisplayableProperties = null;
             this.realTimeDetailSource.UseWeakEventHandler = true;
+            // 
+            // detailsLayoutControl
+            // 
+            this.detailsLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.detailsLayoutControl.Location = new System.Drawing.Point(0, 0);
+            this.detailsLayoutControl.Name = "detailsLayoutControl";
+            this.detailsLayoutControl.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(67, 282, 418, 440);
+            this.detailsLayoutControl.Root = this.detailsLayoutControlGroup;
+            this.detailsLayoutControl.Size = new System.Drawing.Size(971, 314);
+            this.detailsLayoutControl.TabIndex = 0;
+            this.detailsLayoutControl.Text = "layoutControl2";
+            // 
+            // detailsLayoutControlGroup
+            // 
+            this.detailsLayoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.detailsLayoutControlGroup.GroupBordersVisible = false;
+            this.detailsLayoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup,
+            this.emptySpaceItem2,
+            this.emptySpaceItem1,
+            this.splitterItem1});
+            this.detailsLayoutControlGroup.Location = new System.Drawing.Point(0, 0);
+            this.detailsLayoutControlGroup.Name = "Root";
+            this.detailsLayoutControlGroup.Size = new System.Drawing.Size(971, 314);
+            this.detailsLayoutControlGroup.TextVisible = false;
+            // 
+            // layoutControlGroup
+            // 
+            this.layoutControlGroup.GroupBordersVisible = false;
+            this.layoutControlGroup.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup.Name = "layoutControlGroup";
+            this.layoutControlGroup.Size = new System.Drawing.Size(194, 17);
+            this.layoutControlGroup.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(206, 0);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(745, 294);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 17);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(194, 277);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // splitterItem1
+            // 
+            this.splitterItem1.AllowHotTrack = true;
+            this.splitterItem1.Location = new System.Drawing.Point(194, 0);
+            this.splitterItem1.Name = "splitterItem1";
+            this.splitterItem1.Size = new System.Drawing.Size(12, 294);
             // 
             // mainForm
             // 
@@ -681,19 +686,14 @@
             this.StatusBar = this.ribbonStatBar;
             this.Text = "lynx\'s DB mongo pre 0.0.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainForm_FormClosing);
-            this.Load += new System.EventHandler(this.mainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.document2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonCtrl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).EndInit();
             this.backstageViewControl1.ResumeLayout(false);
             this.backstageViewClientControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dashSwitch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.groupPanel.ResumeLayout(false);
@@ -704,13 +704,18 @@
             this.dockPanel3_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stdGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stdView)).EndInit();
+            this.detailsPanel.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            this.detailsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailsLayoutControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailsLayoutControlGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitterItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -737,11 +742,6 @@
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl2;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem2;
         private DevExpress.XtraEditors.StyleController styleController1;
-        private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.ToggleSwitch dashSwitch;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl4;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl5;
@@ -776,8 +776,14 @@
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
-        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
-        private DevExpress.Data.RealTimeSource realTimeDetailSource;
+        private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document2;
+        public DevExpress.Data.RealTimeSource realTimeDetailSource;
+        private DevExpress.XtraLayout.LayoutControl detailsLayoutControl;
+        private DevExpress.XtraLayout.LayoutControlGroup detailsLayoutControlGroup;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.SplitterItem splitterItem1;
     }
 }
 

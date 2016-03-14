@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
@@ -11,10 +10,12 @@ using DevExpress.XtraBars.Docking2010.Customization;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraLayout;
+using ge_rethink_zero.controls;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace ge_rethink_zero
+namespace ge_rethink_zero.forms
 {
     public partial class mainForm : RibbonForm
     {
@@ -40,11 +41,6 @@ namespace ge_rethink_zero
             Close();
         }
 
-        private void mainForm_Load(object sender, EventArgs e)
-        {
-            dashSwitch.IsOn = false;
-        }
-
         private void stdView_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
         {
             if (stdView.GetFocusedRow() == null) return;
@@ -57,6 +53,24 @@ namespace ge_rethink_zero
             foreach (var document in eq.ToEnumerable())
             {
                 detailsPanel.Text = document.Values.Single().ToString();
+            }
+
+            layoutControlGroup.Items.Clear();
+            detailsFill(selectedstd);
+        }
+
+        private void detailsFill(string selectedstd)
+        {
+            if (stdView.GetFocusedRow() == null) return;
+
+            var filter = Builders<BsonDocument>.Filter.Eq("fullname", selectedstd);
+            var collection = _database.GetCollection<BsonDocument>("students");
+            var projection = Builders<BsonDocument>.Projection.Exclude("_id").Exclude("fname").Exclude("lname");
+            var eq = collection.Find(filter).Project(projection).First();
+
+            foreach (var document in eq)
+            {
+                layoutControlGroup.AddItem(new SimpleLabelItem() { Text = document.Name + @": " + document.Value, ControlAlignment = ContentAlignment.TopLeft});
             }
         }
 
@@ -125,10 +139,6 @@ namespace ge_rethink_zero
             realTimeGroupSource.DataSource = gtable;
             groupView.PopulateColumns();
         }
-        private void dashSwitch_Toggled(object sender, EventArgs e)
-        {
-            rPage1.Visible = dashSwitch.IsOn;
-        }
 
         private static bool canCloseFunc(DialogResult parameter)
         {
@@ -194,7 +204,7 @@ namespace ge_rethink_zero
             panel.Controls.Add(stdcontrol);
             panel.Options.ShowAutoHideButton = false;
             panel.Options.ShowMaximizeButton = false;
-            panel.FloatSize = new Size(341, 268); //249*191 11*41 330; 244
+            panel.FloatSize = new Size(341, 268);
             panel.Text = @"student add in progress ..";
             panel.Options.ResizeDirection = ResizeDirection.None;
             panel.FloatLocation = new Point(Location.X + Width / 2 - 130, Location.Y + Height / 2 - 115);
