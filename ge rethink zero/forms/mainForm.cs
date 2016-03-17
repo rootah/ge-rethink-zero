@@ -11,9 +11,17 @@ using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraLayout;
+using DevExpress.XtraNavBar;
+using DevExpress.XtraTreeList.Nodes;
 using ge_rethink_zero.controls;
 using MongoDB.Bson;
 using MongoDB.Driver;
+
+/*
+    td  1.  add parsing db field names
+    td  2.  edit forms
+
+*/
 
 namespace ge_rethink_zero.forms
 {
@@ -27,9 +35,9 @@ namespace ge_rethink_zero.forms
             InitializeComponent();
             mongoInit();
             groupGridFill();
+            stdFullgridFill();
             //DevExpress.Data.CurrencyDataController.DisableThreadingProblemsDetection = true;
         }
-
         private static void mongoInit()
         {
             _client = new MongoClient();
@@ -227,6 +235,36 @@ namespace ge_rethink_zero.forms
                 stdDel();
             if (dockManager1.ActivePanel == groupPanel)
                 MessageBox.Show(@"group");
+        }
+
+        private async void fillnavBtn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            treeList1.BeginUnboundLoad();
+            
+            var groupcollection = _database.GetCollection<BsonDocument>("groups");
+            var groupprojection = Builders<BsonDocument>.Projection.Exclude("_id").Include("groupno");
+            var groupsort = Builders<BsonDocument>.Sort.Ascending("groupno");
+            var groupcursor = await groupcollection.Find(new BsonDocument()).Project(groupprojection).Sort(groupsort).ToCursorAsync();
+
+            var stdcollection = _database.GetCollection<BsonDocument>("students");
+            var stdprojection = Builders<BsonDocument>.Projection.Exclude("_id").Include("fullname");
+            var stdsort = Builders<BsonDocument>.Sort.Ascending("lname");
+
+            foreach (var document in groupcursor.ToEnumerable())
+            {
+                TreeListNode parentForRootNodes = null;
+                var rootNode = treeList1.AppendNode( new object[] { document.Values.Single().ToString() }, parentForRootNodes);
+
+                var stdfilter = Builders<BsonDocument>.Filter.Eq("groupno", document.Values.Single().ToString());
+                var stdcursor = stdcollection.Find(stdfilter).Project(stdprojection).Sort(stdsort).ToCursor();
+
+                foreach (var stddocument in stdcursor.ToEnumerable())
+                {
+                    treeList1.AppendNode(new object[] { stddocument.Values.Single().ToString() }, rootNode);
+                }
+            }
+
+            treeList1.EndUnboundLoad();
         }
     }
 }
