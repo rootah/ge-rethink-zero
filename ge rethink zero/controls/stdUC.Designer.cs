@@ -1,6 +1,6 @@
 ﻿namespace ge_rethink_zero.controls
 {
-    partial class stdUC
+    internal partial class stdUC
     {
         /// <summary> 
         /// Required designer variable.

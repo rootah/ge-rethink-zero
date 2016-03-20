@@ -21,7 +21,7 @@ namespace ge_rethink_zero
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new mainForm());
+            Application.Run(mainForm: new mainForm());
         }
     }
 }

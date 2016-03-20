@@ -1,6 +1,6 @@
 ﻿namespace ge_rethink_zero.controls
 {
-    partial class groupUC
+    internal partial class groupUC
     {
         /// <summary> 
         /// Required designer variable.

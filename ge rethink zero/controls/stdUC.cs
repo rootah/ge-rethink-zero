@@ -6,7 +6,7 @@ using MongoDB.Driver;
 
 namespace ge_rethink_zero.controls
 {
-    public partial class stdUC : DevExpress.XtraEditors.XtraUserControl
+    internal partial class stdUC : DevExpress.XtraEditors.XtraUserControl
     {
         private readonly mainForm _parentForm;
         private static IMongoClient _client;

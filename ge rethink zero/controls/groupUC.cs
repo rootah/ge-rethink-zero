@@ -6,13 +6,15 @@ using MongoDB.Driver;
 
 namespace ge_rethink_zero.controls
 {
-    public partial class groupUC : DevExpress.XtraEditors.XtraUserControl
+    internal partial class groupUC : DevExpress.XtraEditors.XtraUserControl
     {
         private readonly mainForm _parentForm;
         private static IMongoClient _client;
         private static IMongoDatabase _database;
 
+#pragma warning disable CS0436 // Type conflicts with imported type
         public groupUC(mainForm parentForm)
+#pragma warning restore CS0436 // Type conflicts with imported type
         {
             _parentForm = parentForm;
             InitializeComponent();

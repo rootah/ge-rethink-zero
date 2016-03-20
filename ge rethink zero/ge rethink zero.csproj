@@ -82,6 +82,9 @@
       <HintPath>..\packages\Faker.Net.1.0.3\lib\net40\Faker.NET4.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ge rethink zero">
+      <HintPath>obj\Debug\ge rethink zero.exe</HintPath>
+    </Reference>
     <Reference Include="MongoDB.Bson, Version=2.2.3.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Bson.2.2.3\lib\net45\MongoDB.Bson.dll</HintPath>
       <Private>True</Private>
@@ -121,11 +124,11 @@
     <Compile Include="controls\groupUC.Designer.cs">
       <DependentUpon>groupUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="controls\paymentsGeneralUC.cs">
+    <Compile Include="controls\leftnavUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controls\paymentsGeneralUC.Designer.cs">
-      <DependentUpon>paymentsGeneralUC.cs</DependentUpon>
+    <Compile Include="controls\leftnavUC.Designer.cs">
+      <DependentUpon>leftnavUC.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\mainForm.cs">
       <SubType>Form</SubType>
@@ -144,8 +147,8 @@
     <EmbeddedResource Include="controls\groupUC.resx">
       <DependentUpon>groupUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controls\paymentsGeneralUC.resx">
-      <DependentUpon>paymentsGeneralUC.cs</DependentUpon>
+    <EmbeddedResource Include="controls\leftnavUC.resx">
+      <DependentUpon>leftnavUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>

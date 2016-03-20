@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace ge_rethink_zero.controls
 {
-    public partial class paymentsGeneralUC : DevExpress.XtraEditors.XtraUserControl
+    public partial class leftnavUC : DevExpress.XtraEditors.XtraUserControl
     {
-        public paymentsGeneralUC()
+        public leftnavUC()
         {
             InitializeComponent();
         }
